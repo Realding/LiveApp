@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:id="@+id/activity_live"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.lenovo.liveapp.LiveActivity">
+
+    <io.vov.vitamio.widget.VideoView
+            android:id="@+id/surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <RelativeLayout
+            android:id="@+id/rl_loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/rl_lodaing_bg">
+            <ProgressBar
+                    android:id="@+id/pd_loading"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    android:indeterminateDrawable="@drawable/video_loading"/>
+            <TextView
+                    android:id="@+id/tv_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pd_loading"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/loading"/>
+            
+
+    </RelativeLayout>
+    <!--TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="666"
+            android:textSize="50sp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentLeft="true"/-->
+
+    <!--顶部panel-->
+    <LinearLayout
+            android:id="@+id/ll_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/player_panel_bg"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:orientation="horizontal">
+        <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/return_button_normal"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="5dp"/>
+        <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="@string/item_title_default"
+                android:layout_gravity="center_vertical"/>
+        <TextView
+                android:id="@+id/tv_systime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sys_time"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginLeft="190dp"
+                android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+    <!--底部panel-->
+    <LinearLayout
+            android:id="@+id/ll_play_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/player_panel_bg"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:orientation="horizontal">
+        <ImageView
+                android:id="@+id/iv_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/play_button_normal"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
